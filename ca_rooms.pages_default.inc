@@ -8,7 +8,7 @@ function ca_rooms_default_page_manager_handlers() {
   $handler = new stdClass;
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'node_view_panel_context';
+  $handler->name = 'ca_rooms_node_view_panel_context';
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
@@ -34,9 +34,9 @@ function ca_rooms_default_page_manager_handlers() {
           'not' => FALSE,
         ),
         1 => array(
-          'name' => 'ca_rooms_list_template',
+          'name' => 'ca_rooms_node_room_type_template',
           'settings' => array(
-            'ca_rooms_list_template' => 'ca_rooms_list_template_one',
+            'ca_rooms_node_room_type_template' => 'ca_rooms_node_room_type_template_one',
           ),
           'not' => FALSE,
         ),
@@ -139,11 +139,146 @@ function ca_rooms_default_page_manager_handlers() {
   $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
 
-  $export['node_view_panel_context'] = $handler;
+  $export['ca_rooms_node_view_panel_context'] = $handler;
   $handler = new stdClass;
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'node_view_panel_context_3';
+  $handler->name = 'ca_rooms_node_view_panel_context_2';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = 4;
+  $handler->conf = array(
+    'title' => 'Room Type Template 2',
+    'no_blocks' => 1,
+    'pipeline' => 'standard',
+    'css_id' => 'ca-rooms-template-two',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'ca_room_type' => 'ca_room_type',
+            ),
+          ),
+          'context' => 'argument_nid_1',
+          'not' => FALSE,
+        ),
+        1 => array(
+          'name' => 'ca_rooms_node_room_type_template',
+          'settings' => array(
+            'ca_rooms_node_room_type_template' => 'ca_rooms_node_room_type_template_two',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display;
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '%node:title';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass;
+    $pane->pid = 'new-1';
+    $pane->panel = 'middle';
+    $pane->type = 'content_field';
+    $pane->subtype = 'field_ca_rooms_rt_image';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'normal',
+      'formatter' => 'ca_rooms_rt_scale_200w_imagelink',
+      'context' => 'argument_nid_1',
+      'override_title' => 1,
+      'override_title_text' => '<none>',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $display->content['new-1'] = $pane;
+    $display->panels['middle'][0] = 'new-1';
+    $pane = new stdClass;
+    $pane->pid = 'new-2';
+    $pane->panel = 'middle';
+    $pane->type = 'node_body';
+    $pane->subtype = 'node_body';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => 'argument_nid_1',
+      'override_title' => 1,
+      'override_title_text' => '<none>',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $display->content['new-2'] = $pane;
+    $display->panels['middle'][1] = 'new-2';
+    $pane = new stdClass;
+    $pane->pid = 'new-3';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_rooms-panel_pane_4';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $display->content['new-3'] = $pane;
+    $display->panels['middle'][2] = 'new-3';
+    $pane = new stdClass;
+    $pane->pid = 'new-4';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_rooms-panel_pane_9';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $display->content['new-4'] = $pane;
+    $display->panels['middle'][3] = 'new-4';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = 'new-1';
+  $handler->conf['display'] = $display;
+
+  $export['ca_rooms_node_view_panel_context_2'] = $handler;
+  $handler = new stdClass;
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'ca_rooms_node_view_panel_context_3';
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
@@ -162,16 +297,16 @@ function ca_rooms_default_page_manager_handlers() {
           'name' => 'node_type',
           'settings' => array(
             'type' => array(
-              'ca_room' => 'ca_room'
+              'ca_room' => 'ca_room',
             ),
           ),
           'context' => 'argument_nid_1',
           'not' => FALSE,
         ),
         1 => array(
-          'name' => 'ca_rooms_node_template',
+          'name' => 'ca_rooms_node_room_template',
           'settings' => array(
-            'ca_rooms_node_template' => 'ca_rooms_node_template_one',
+            'ca_rooms_node_room_template' => 'ca_rooms_node_room_template_one',
           ),
           'not' => FALSE,
         ),
@@ -265,7 +400,7 @@ function ca_rooms_default_page_manager_handlers() {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
 
-  $export['node_view_panel_context_3'] = $handler;
+  $export['ca_rooms_node_view_panel_context_3'] = $handler;
   return $export;
 }
 
@@ -283,6 +418,8 @@ function ca_rooms_default_page_manager_pages() {
   $page->path = 'rooms/view';
   $page->access = array(
     'plugins' => array(),
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'default tab',
@@ -396,6 +533,8 @@ function ca_rooms_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'tab',
@@ -465,6 +604,8 @@ function ca_rooms_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'tab',
@@ -523,6 +664,8 @@ function ca_rooms_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'tab',
@@ -590,6 +733,8 @@ function ca_rooms_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'tab',
@@ -659,6 +804,8 @@ function ca_rooms_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'tab',
@@ -717,6 +864,8 @@ function ca_rooms_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'default tab',
@@ -805,6 +954,8 @@ function ca_rooms_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'tab',
@@ -903,6 +1054,8 @@ function ca_rooms_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'default tab',
@@ -1008,6 +1161,8 @@ function ca_rooms_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'tab',

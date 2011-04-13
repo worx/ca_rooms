@@ -86,7 +86,10 @@ function ca_rooms_token_values($type, $object = NULL) {
  */
 function ca_rooms_views_pre_build(&$view) {
   if ($view->name == 'ca_rooms') {
-    //$view->display['panel_pane_4']->handler->options['title'] = 'Bob';
-    //$view->display['panel_pane_5']->handler->options['title'] = 'Frank';
+    // Template One
+    $view->display['panel_pane_4']->handler->options['title'] = variable_get('ca_rooms_views_display_title_subroom_type', 'Sub Room Types');
+    $view->display['panel_pane_5']->handler->options['title'] = variable_get('ca_rooms_views_display_title_room_list', 'Rooms');
+    // Template Two
+    $view->display['panel_pane_9']->handler->options['title'] = variable_get('ca_rooms_views_display_title_room_list', 'Rooms');
   }
 }

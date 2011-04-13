@@ -18,6 +18,21 @@ function ca_rooms_ctools_plugin_api() {
  */
 function ca_rooms_imagecache_default_presets() {
   $items = array(
+    'ca_rooms_r_scale_100w' => array(
+      'presetname' => 'ca_rooms_r_scale_100w',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => '100',
+            'height' => '',
+            'upscale' => 0,
+          ),
+        ),
+      ),
+    ),
     'ca_rooms_r_scale_200w' => array(
       'presetname' => 'ca_rooms_r_scale_200w',
       'actions' => array(

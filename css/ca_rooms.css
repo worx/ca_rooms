@@ -2,14 +2,22 @@
   /* Template One */
   #ca-rooms-template-one table td {width: 25%; text-align: center;}
 
-  /* List View Level */
-  #ca-rooms-template-one .pane-field-ca-rooms-rt-image {float: left; margin-right: 10px;}
-  #ca-rooms-template-one .pane-ca-rooms-panel-pane-4, #ca-rooms-template-one .pane-ca-rooms-panel-pane-5 {border-top: 1px solid #D2D2D2;}
-  #ca-rooms-template-one .pane-ca-rooms-panel-pane-4 h2, #ca-rooms-template-one .pane-ca-rooms-panel-pane-5 h2 {margin-top: 10px;}
+    /* List View Level */
+    #ca-rooms-template-one .pane-field-ca-rooms-rt-image {float: left; margin-right: 10px;}
+    #ca-rooms-template-one .pane-ca-rooms-panel-pane-4, #ca-rooms-template-one .pane-ca-rooms-panel-pane-5 {border-top: 1px solid #D2D2D2; clear: both;}
+    #ca-rooms-template-one .pane-ca-rooms-panel-pane-4 h2, #ca-rooms-template-one .pane-ca-rooms-panel-pane-5 h2 {margin-top: 10px;}
 
-  /* Node Level */
-  #ca-rooms-template-one #room-body {float: left; text-align: justify; width: 420px;}
-  #ca-rooms-template-one .pane-ca-rooms-panel-pane-6 {float: right;}
-  #ca-rooms-template-one #views_slideshow_singleframe_pager_ca_rooms-panel_pane_6 {text-align: center;}
-  #ca-rooms-template-one #views_slideshow_singleframe_pager_ca_rooms-panel_pane_6 div a img {width: 50px; height: 50px;}
-  #ca-rooms-template-one #room-amenities {clear: right; float: left; margin-left: 20px; text-align: justify; width: 500px;}
+    /* Node Level */
+    #ca-rooms-template-one #room-body {float: left; text-align: justify; width: 420px;}
+    #ca-rooms-template-one .pane-ca-rooms-panel-pane-6 {float: right;}
+    #ca-rooms-template-one #views_slideshow_singleframe_pager_ca_rooms-panel_pane_6 {text-align: center;}
+    #ca-rooms-template-one #views_slideshow_singleframe_pager_ca_rooms-panel_pane_6 div a img {width: 50px; height: 50px;}
+    #ca-rooms-template-one #room-amenities {clear: right; float: left; margin-left: 20px; text-align: justify; width: 500px;}
+
+  /* Teamplate Two */
+  #ca-rooms-template-two table td {width: 20%; text-align: center;}
+
+    /* List View Level */
+    #ca-rooms-template-two .pane-field-ca-rooms-rt-image {float: left; margin-right: 10px;}
+    #ca-rooms-template-two .pane-ca-rooms-panel-pane-4, #ca-rooms-template-two .pane-ca-rooms-panel-pane-9 {border-top: 1px solid #D2D2D2; clear: both;}
+    #ca-rooms-template-two .pane-ca-rooms-panel-pane-4 h2, #ca-rooms-template-two .pane-ca-rooms-panel-pane-9 h2 {margin-top: 10px;}
