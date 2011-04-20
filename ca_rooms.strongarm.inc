@@ -87,13 +87,6 @@ function ca_rooms_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'page_manager_node_view_disabled';
-  $strongarm->value = FALSE;
-
-  $export['page_manager_node_view_disabled'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_ca_room_pattern';
   $strongarm->value = '[ca-rooms-parent-node-reference-path]/[title-raw]';
 
