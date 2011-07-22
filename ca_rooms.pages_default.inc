@@ -14,7 +14,7 @@ function ca_rooms_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = 2;
   $handler->conf = array(
-    'title' => 'CA Rooms: Node Room Type Template One',
+    'title' => 'Room Type Template 1',
     'no_blocks' => 1,
     'pipeline' => 'standard',
     'css_id' => 'ca-rooms-template-one',
@@ -149,7 +149,7 @@ function ca_rooms_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = 4;
   $handler->conf = array(
-    'title' => 'CA Rooms: Node Room Type Template Two',
+    'title' => 'Room Type Template 2',
     'no_blocks' => 1,
     'pipeline' => 'standard',
     'css_id' => 'ca-rooms-template-two',
@@ -284,7 +284,7 @@ function ca_rooms_default_page_manager_handlers() {
   $handler->handler = 'panel_context';
   $handler->weight = 3;
   $handler->conf = array(
-    'title' => 'CA Rooms: Node Room Template One',
+    'title' => 'Room Template 1',
     'no_blocks' => 1,
     'pipeline' => 'standard',
     'css_id' => 'ca-rooms-template-one',
